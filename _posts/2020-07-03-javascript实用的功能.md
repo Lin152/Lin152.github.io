@@ -1,5 +1,4 @@
-﻿
----
+﻿---
 title: JavaScript实用的功能
 tags: Lin
 ---
