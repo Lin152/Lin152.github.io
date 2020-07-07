@@ -5,11 +5,13 @@ tags: Lin
 
 首先引入，我这里使用是5.3.0
 
-	npm i swiper@5.3.0 --save 
+	npm i swiper@5.3.0 --save
+	
 然后在组件头部引入
 
 	import Swiper from 'swiper';
 	import 'swiper/css/swiper.css';
+	
 这里我使用的是class组件
 初始化轮播组件
 
@@ -33,12 +35,13 @@ tags: Lin
 
     }
  
- 数据改变的时候，重新渲染
+数据改变的时候，重新渲染
  
 	  componentDidUpdate() {
 	        this.swiperObj.update();
 	        this.swiperObj.slideTo(0, 1000, false);
 	  }
+	  
 数据改变的时候可以会卡死，使用这个生命周期解决（list是传入的数据）。原理：当数据发生改变，先销毁swiper，再重新初始化。
 
 	componentWillReceiveProps = (nextProps) => {
